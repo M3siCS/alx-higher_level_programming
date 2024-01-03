@@ -2,7 +2,8 @@
 #define LISTS_H
 
 #include <stdlib.h>
-
+#include <stddef.h>
+# include <sys/types.h>
 /**
  *  * struct listint_s - singly linked list
  *   * @n: integer
