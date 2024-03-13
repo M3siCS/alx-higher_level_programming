@@ -1,15 +1,12 @@
--- Calculate the average temperature (Fahrenheit) by city and order by temperature (descending)
-
--- Select the city and calculate the average temperature in Fahrenheit
+-- Displays the average temperature (Fahrenheit) by city ordered by temperature (descending)
+-- Display an average value
 SELECT 
     city, 
-    AVG(temperature * 9 / 5 + 32) AS average_temperature_fahrenheit
+    AVG(temperature * 9 / 5 + 32) AS avg_temp -- Calculate average temperature in Fahrenheit
 FROM 
-    table_name -- Replace 'table_name' with the actual name of the imported table
+    temperatures -- Replace 'temperatures' with the actual name of the imported table
 GROUP BY 
-    city -- Group the data by city
-
--- Order the results by average temperature in descending order
+    city -- Group by city
 ORDER BY 
-    average_temperature_fahrenheit DESC;
+    avg_temp DESC; -- Order by average temperature in descending order
 
