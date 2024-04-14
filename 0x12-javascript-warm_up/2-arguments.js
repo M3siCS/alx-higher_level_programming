@@ -1,13 +1,13 @@
 #!/usr/bin/node
-const argsLength = process.argv.length;
+const { allowedNodeEnvironmentFlags } = require('node:process');
 
-switch (argsLength) {
-	case 2:
-		console.log("No argument");
-		break;
-	case 3:
-		console.log("Argument found");
-		break;
-	default:
-		console.log("Arguments found");
+const argsLength = process.argv.length - 2;
+
+if (argsLength === 0) {
+    console.log("No argument");
+} else if (argsLength === 1) {
+    console.log("Argument found");
+} else {
+    console.log("Arguments found");
 }
+
